@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		179699C322F9C98600DF65C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179699C222F9C98600DF65C0 /* AppDelegate.swift */; };
 		179699C522F9C98600DF65C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179699C422F9C98600DF65C0 /* ViewController.swift */; };
-		179699C822F9C98600DF65C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179699C622F9C98600DF65C0 /* Main.storyboard */; };
 		179699CA22F9C98700DF65C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179699C922F9C98700DF65C0 /* Assets.xcassets */; };
 		179699CD22F9C98700DF65C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179699CB22F9C98700DF65C0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +17,6 @@
 		179699BF22F9C98600DF65C0 /* GardinerNotebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GardinerNotebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		179699C222F9C98600DF65C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		179699C422F9C98600DF65C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		179699C722F9C98600DF65C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		179699C922F9C98700DF65C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		179699CC22F9C98700DF65C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		179699CE22F9C98700DF65C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,7 +36,7 @@
 		179699B622F9C98600DF65C0 = {
 			isa = PBXGroup;
 			children = (
-				179699C122F9C98600DF65C0 /* GardinerNotebook */,
+				179699C122F9C98600DF65C0 /* Classes */,
 				179699C022F9C98600DF65C0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,17 +49,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		179699C122F9C98600DF65C0 /* GardinerNotebook */ = {
+		179699C122F9C98600DF65C0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				179699C422F9C98600DF65C0 /* ViewController.swift */,
+				179699D422F9C9F700DF65C0 /* Supporting Files */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		179699D422F9C9F700DF65C0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				179699C222F9C98600DF65C0 /* AppDelegate.swift */,
-				179699C422F9C98600DF65C0 /* ViewController.swift */,
-				179699C622F9C98600DF65C0 /* Main.storyboard */,
-				179699C922F9C98700DF65C0 /* Assets.xcassets */,
 				179699CB22F9C98700DF65C0 /* LaunchScreen.storyboard */,
 				179699CE22F9C98700DF65C0 /* Info.plist */,
+				179699C922F9C98700DF65C0 /* Assets.xcassets */,
 			);
-			path = GardinerNotebook;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +129,6 @@
 			files = (
 				179699CD22F9C98700DF65C0 /* LaunchScreen.storyboard in Resources */,
 				179699CA22F9C98700DF65C0 /* Assets.xcassets in Resources */,
-				179699C822F9C98600DF65C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,14 +147,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		179699C622F9C98600DF65C0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				179699C722F9C98600DF65C0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		179699CB22F9C98700DF65C0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,7 +280,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JMJB9V596;
-				INFOPLIST_FILE = GardinerNotebook/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Classes/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +299,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JMJB9V596;
-				INFOPLIST_FILE = GardinerNotebook/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Classes/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
