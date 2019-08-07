@@ -7,4 +7,6 @@ target 'GardinerNotebook' do
 
   # Pods for Haxning
   pod 'SwiftLint'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 end
