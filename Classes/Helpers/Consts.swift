@@ -12,6 +12,6 @@ enum Consts {
 
     enum Urls {
 
-        static let github = URL(string: "https://github.com/florianldt")!
+        static let github = URL(string: "https://github.com/florianldt/GardinerNotebook")!
     }
 }
