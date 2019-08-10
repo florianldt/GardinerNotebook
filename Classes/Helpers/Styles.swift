@@ -31,5 +31,6 @@ class Styles {
     enum Colors {
 
         static let backgroundLightGray = "EEEEEE"
+        static let errorLabel = "CDCDCD"
     }
 }
