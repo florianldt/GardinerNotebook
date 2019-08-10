@@ -22,7 +22,7 @@ struct HieroglyphListViewModel {
         case loading
         case loaded([Category])
         case filtered(String, [Category])
-        case failed(Error)
+        case failed(String?)
     }
 
     let state: State

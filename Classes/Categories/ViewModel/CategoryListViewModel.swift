@@ -20,7 +20,7 @@ struct CategoryListViewModel {
         case initialized
         case loading
         case loaded([Category])
-        case failed(Error)
+        case failed(String?)
     }
 
     let state: State
@@ -38,8 +38,8 @@ struct CategoryListViewModel {
         case .loaded(let categories):
             let categoryViewModels = CategoryViewModel.from(categories)
             viewModels = categoryViewModels.map(ViewModelType.category)
-        case .failed(let error):
-            let errorViewModel = ErrorViewModel.from(error)
+        case .failed(let errorDescription):
+            let errorViewModel = ErrorViewModel.from(errorDescription)
             viewModels = [
                 .failure(errorViewModel),
             ]

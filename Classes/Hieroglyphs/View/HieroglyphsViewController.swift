@@ -75,6 +75,8 @@ class HieroglyphsViewController: UICollectionViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.registerHeader(CategoryHeaderCell.self)
+        collectionView.register(LoadingStateCollectionViewCell.self)
+        collectionView.register(ErrorStateCollectionViewCell.self)
         collectionView.register(HieroglyphCell.self)
         collectionView.contentInset = UIEdgeInsets(top: 0,
                                                    left: 0,
@@ -137,17 +139,20 @@ extension HieroglyphsViewController {
                 returnCell = cell
             }
         case .loading:
-            let cell = collectionView.dequeue(HieroglyphCell.self, for: indexPath)
-            cell.
+            let cell = collectionView.dequeue(LoadingStateCollectionViewCell.self, for: indexPath)
+            cell.activityIndicator.startAnimating()
             returnCell = cell
         case .failure(let viewModel):
-            let cell = collectionView.dequeue(HieroglyphCell.self, for: indexPath)
+            let cell = collectionView.dequeue(ErrorStateCollectionViewCell.self, for: indexPath)
+            cell.configure(with: viewModel)
             returnCell = cell
         }
         return returnCell
     }
 
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    override func collectionView(_ collectionView: UICollectionView,
+                                 viewForSupplementaryElementOfKind kind: String,
+                                 at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
             let cellViewModel = interactor.viewModel.value.viewModelType(at: indexPath)
@@ -187,8 +192,17 @@ extension HieroglyphsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Styles.Sizes.Cells.Hieroglyph.width,
-                      height: Styles.Sizes.Cells.Hieroglyph.height)
+        let returnSize: CGSize
+        let cellViewModel = interactor.viewModel.value.viewModelType(at: indexPath)
+        switch cellViewModel {
+        case .loading, .failure:
+            returnSize = CGSize(width: Styles.Sizes.screenW,
+                                height: 60)
+        case .category, .filter:
+            returnSize = CGSize(width: Styles.Sizes.Cells.Hieroglyph.width,
+                                height: Styles.Sizes.Cells.Hieroglyph.height)
+        }
+        return returnSize
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -200,7 +214,9 @@ extension HieroglyphsViewController: UICollectionViewDelegateFlowLayout {
                             right: Styles.Sizes.gutter)
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForHeaderInSection section: Int) -> CGSize {
         let returnSize: CGSize
         let constraintWidth: CGFloat = Styles.Sizes.screenW - Styles.Sizes.gutter * 2
         let cellViewModelType = interactor.viewModel.value.viewModelType(at: [section, 0])

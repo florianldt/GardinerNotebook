@@ -1,14 +1,14 @@
 //
-//  LoadingStateTableViewCell.swift
+//  LoadingStateCollectionViewCell.swift
 //  GardinerNotebook
 //
-//  Created by Florian LUDOT on 8/7/19.
+//  Created by Florian LUDOT on 8/10/19.
 //  Copyright © 2019 Florian LUDOT. All rights reserved.
 //
 
 import UIKit
 
-class LoadingStateTableViewCell: UITableViewCell {
+class LoadingStateCollectionViewCell: UICollectionViewCell {
 
     let activityIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView(style: .gray)
@@ -16,14 +16,13 @@ class LoadingStateTableViewCell: UITableViewCell {
         return indicator
     }()
 
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         contentView.backgroundColor = .clear
         contentView.addSubview(activityIndicator)
         NSLayoutConstraint.activate([
-            activityIndicator.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
             activityIndicator.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            activityIndicator.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12),
+            activityIndicator.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             ])
     }
 

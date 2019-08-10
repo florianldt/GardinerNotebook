@@ -52,6 +52,7 @@ class CategoriesViewController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(LoadingStateTableViewCell.self)
+        tableView.register(ErrorStateTableViewCell.self)
         tableView.register(CategoryCell.self)
     }
 
@@ -96,8 +97,8 @@ extension CategoriesViewController {
             cell.configure(with: viewModel)
             returnCell = cell
         case .failure(let viewModel):
-            let cell = tableView.dequeue(LoadingStateTableViewCell.self, for: indexPath)
-            cell.activityIndicator.startAnimating()
+            let cell = tableView.dequeue(ErrorStateTableViewCell.self, for: indexPath)
+            cell.configure(with: viewModel)
             returnCell = cell
         }
         return returnCell

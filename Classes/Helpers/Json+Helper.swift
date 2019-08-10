@@ -14,7 +14,7 @@ class Json {
 
     enum JsonDecoderOperation<Value> {
         case success(Value)
-        case failure(JsonDecoderError)
+        case failure(String?)
     }
 
     enum JsonDecoderError: LocalizedError {
@@ -36,7 +36,7 @@ class Json {
 
     func from<T: Decodable>(_ filename: String, type: T.Type, completionHandler: JsonDecoderOperationCompletion<T>?) {
         guard let url = Bundle.main.url(forResource: filename, withExtension: "json") else {
-            completionHandler?(.failure(JsonDecoderError.fileNotFound(String(format: "%@.json", filename))))
+            completionHandler?(.failure(JsonDecoderError.fileNotFound(String(format: "%@.json", filename)).errorDescrition))
             return
         }
         do {
@@ -46,13 +46,12 @@ class Json {
                 completionHandler?(.success(object))
                 return
             } catch {
-                completionHandler?(.failure(JsonDecoderError.decodationFailure(String(format: "%@.json", filename))))
+                completionHandler?(.failure(JsonDecoderError.decodationFailure(String(format: "%@.json", filename)).errorDescrition))
                 return
             }
         } catch {
-            completionHandler?(.failure(JsonDecoderError.corruptedData(String(format: "%@.json", filename))))
+            completionHandler?(.failure(JsonDecoderError.corruptedData(String(format: "%@.json", filename)).errorDescrition))
             return
         }
     }
 }
-

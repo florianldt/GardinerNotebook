@@ -14,7 +14,7 @@ struct ErrorViewModel {
 
 extension ErrorViewModel {
 
-    static func from(_ error: Error) -> ErrorViewModel {
-        return ErrorViewModel(description: error.localizedDescription)
+    static func from(_ errorDescription: String?) -> ErrorViewModel {
+        return ErrorViewModel(description: errorDescription ?? "Something went wrong!")
     }
 }

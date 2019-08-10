@@ -26,8 +26,8 @@ class CategoryCell: UITableViewCell {
         contentView.addSubview(nameLabel)
         NSLayoutConstraint.activate([
             nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-            nameLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 18),
-            nameLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -18),
+            nameLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: Styles.Sizes.gutter),
+            nameLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: Styles.Sizes.gutter),
             nameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
             ])
     }
