@@ -1,4 +1,5 @@
 PODS:
+  - AloeStackView (1.1.0)
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -8,23 +9,26 @@ PODS:
   - SwiftLint (0.33.0)
 
 DEPENDENCIES:
+  - AloeStackView
   - RxCocoa
   - RxSwift
   - SwiftLint
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AloeStackView
     - RxCocoa
     - RxRelay
     - RxSwift
     - SwiftLint
 
 SPEC CHECKSUMS:
+  AloeStackView: fe6bb97cb2ba3d23c59516b3610b854e2c081698
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SwiftLint: fed9c66336e41fc74dc48a73678380718f0c8b0e
 
-PODFILE CHECKSUM: 5890bf9ae6222e93f41f14ce8dd5aef53d3765b9
+PODFILE CHECKSUM: 655caa3e6ef99907fe5887c0dd11928b7580a1e1
 
 COCOAPODS: 1.7.3

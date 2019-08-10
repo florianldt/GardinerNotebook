@@ -9,4 +9,5 @@ target 'GardinerNotebook' do
   pod 'SwiftLint'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'AloeStackView'
 end

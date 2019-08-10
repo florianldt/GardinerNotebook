@@ -1,0 +1,6 @@
+framework module AloeStackView {
+  umbrella header "AloeStackView-umbrella.h"
+
+  export *
+  module * { export * }
+}
