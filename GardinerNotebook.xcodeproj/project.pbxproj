@@ -32,6 +32,9 @@
 		1789B84322FED24A004C4B3A /* HieroglyphFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789B84222FED24A004C4B3A /* HieroglyphFilterViewModel.swift */; };
 		1789B84522FEE3B7004C4B3A /* Version+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789B84422FEE3B7004C4B3A /* Version+Helper.swift */; };
 		1789B84722FEE4EB004C4B3A /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789B84622FEE4EB004C4B3A /* Consts.swift */; };
+		1789B84922FEF88A004C4B3A /* LoadingStateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789B84822FEF88A004C4B3A /* LoadingStateCollectionViewCell.swift */; };
+		1789B84B22FEFA76004C4B3A /* ErrorStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789B84A22FEFA76004C4B3A /* ErrorStateTableViewCell.swift */; };
+		1789B84D22FF0033004C4B3A /* ErrorStateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789B84C22FF0033004C4B3A /* ErrorStateCollectionViewCell.swift */; };
 		179699C322F9C98600DF65C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179699C222F9C98600DF65C0 /* AppDelegate.swift */; };
 		179699CA22F9C98700DF65C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179699C922F9C98700DF65C0 /* Assets.xcassets */; };
 		179699CD22F9C98700DF65C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179699CB22F9C98700DF65C0 /* LaunchScreen.storyboard */; };
@@ -73,6 +76,9 @@
 		1789B84222FED24A004C4B3A /* HieroglyphFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HieroglyphFilterViewModel.swift; sourceTree = "<group>"; };
 		1789B84422FEE3B7004C4B3A /* Version+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Version+Helper.swift"; sourceTree = "<group>"; };
 		1789B84622FEE4EB004C4B3A /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		1789B84822FEF88A004C4B3A /* LoadingStateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateCollectionViewCell.swift; sourceTree = "<group>"; };
+		1789B84A22FEFA76004C4B3A /* ErrorStateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateTableViewCell.swift; sourceTree = "<group>"; };
+		1789B84C22FF0033004C4B3A /* ErrorStateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateCollectionViewCell.swift; sourceTree = "<group>"; };
 		179699BF22F9C98600DF65C0 /* GardinerNotebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GardinerNotebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		179699C222F9C98600DF65C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		179699C922F9C98700DF65C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -355,6 +361,9 @@
 			isa = PBXGroup;
 			children = (
 				179699F422FB01BA00DF65C0 /* LoadingStateTableViewCell.swift */,
+				1789B84822FEF88A004C4B3A /* LoadingStateCollectionViewCell.swift */,
+				1789B84A22FEFA76004C4B3A /* ErrorStateTableViewCell.swift */,
+				1789B84C22FF0033004C4B3A /* ErrorStateCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -534,11 +543,14 @@
 				179699E722FAECBE00DF65C0 /* CategoryListInteractor.swift in Sources */,
 				171D68C422FBE3D70021BA7C /* HieroglyphViewModel.swift in Sources */,
 				179699F122FAF5BE00DF65C0 /* ErrorViewModel.swift in Sources */,
+				1789B84D22FF0033004C4B3A /* ErrorStateCollectionViewCell.swift in Sources */,
 				171D68E522FD19D10021BA7C /* HieroglyphDetailInformationView.swift in Sources */,
 				171D68DD22FC36F30021BA7C /* HieroglyphDetailViewController.swift in Sources */,
 				171D68D022FC0F610021BA7C /* HieroglyphListViewModel.swift in Sources */,
 				171D68D922FC2CC10021BA7C /* CategoryHeaderCell.swift in Sources */,
 				179699F722FB251800DF65C0 /* UITableView+Extension.swift in Sources */,
+				1789B84B22FEFA76004C4B3A /* ErrorStateTableViewCell.swift in Sources */,
+				1789B84922FEF88A004C4B3A /* LoadingStateCollectionViewCell.swift in Sources */,
 				171D68D222FC13010021BA7C /* CategoryCell.swift in Sources */,
 				179699E422FAEB6200DF65C0 /* Category.swift in Sources */,
 				171D68C822FBFC0B0021BA7C /* UICollectionViewController+Extension.swift in Sources */,
