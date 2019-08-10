@@ -15,9 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+        UINavigationBar.appearance().tintColor = .black
+        UITabBar.appearance().tintColor = .black
+        UIBarButtonItem.appearance().tintColor = .black
+
         window = UIWindow(frame: UIScreen.main.bounds)
-        let categoriesViewController = CategoriesViewController()
-        window?.rootViewController = UINavigationController(rootViewController: categoriesViewController)
+        window?.rootViewController = GNTabBarController()
         window?.makeKeyAndVisible()
         return true
     }

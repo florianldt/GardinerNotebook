@@ -3,28 +3,90 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		171D68B122FBD56B0021BA7C /* GNTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D68B022FBD56B0021BA7C /* GNTabBarController.swift */; };
+		171D68B522FBD6270021BA7C /* CategoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D68B422FBD6270021BA7C /* CategoryDetailViewController.swift */; };
+		171D68BA22FBDB710021BA7C /* gardiner_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 171D68B922FBDB710021BA7C /* gardiner_list.json */; };
+		171D68BC22FBDB8A0021BA7C /* Hieroglyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D68BB22FBDB8A0021BA7C /* Hieroglyph.swift */; };
+		171D68BF22FBE1340021BA7C /* HieroglyphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D68BE22FBE1340021BA7C /* HieroglyphCell.swift */; };
+		171D68C222FBE3CE0021BA7C /* CategoryDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D68C122FBE3CE0021BA7C /* CategoryDetailInteractor.swift */; };
+		171D68C422FBE3D70021BA7C /* HieroglyphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D68C322FBE3D70021BA7C /* HieroglyphViewModel.swift */; };
+		171D68C622FBF75E0021BA7C /* CategoryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D68C522FBF75E0021BA7C /* CategoryDetailViewModel.swift */; };
+		171D68C822FBFC0B0021BA7C /* UICollectionViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D68C722FBFC0B0021BA7C /* UICollectionViewController+Extension.swift */; };
+		171D68CE22FC0EA00021BA7C /* HieroglyphListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D68CD22FC0EA00021BA7C /* HieroglyphListInteractor.swift */; };
+		171D68D022FC0F610021BA7C /* HieroglyphListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D68CF22FC0F610021BA7C /* HieroglyphListViewModel.swift */; };
+		171D68D222FC13010021BA7C /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D68D122FC13010021BA7C /* CategoryCell.swift */; };
+		171D68D422FC18B20021BA7C /* HieroglyphsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D68D322FC18B20021BA7C /* HieroglyphsViewController.swift */; };
+		171D68D622FC1D420021BA7C /* HieroglyphSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D68D522FC1D420021BA7C /* HieroglyphSectionViewModel.swift */; };
+		171D68D922FC2CC10021BA7C /* CategoryHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D68D822FC2CC10021BA7C /* CategoryHeaderCell.swift */; };
+		171D68DD22FC36F30021BA7C /* HieroglyphDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D68DC22FC36F30021BA7C /* HieroglyphDetailViewController.swift */; };
+		171D68E022FC38A80021BA7C /* HieroglyphDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D68DF22FC38A80021BA7C /* HieroglyphDetailInteractor.swift */; };
+		171D68E322FC3D300021BA7C /* HieroglyphsDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D68E222FC3D300021BA7C /* HieroglyphsDetailHeaderView.swift */; };
+		171D68E522FD19D10021BA7C /* HieroglyphDetailInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171D68E422FD19D10021BA7C /* HieroglyphDetailInformationView.swift */; };
+		1789B83D22FEA1D4004C4B3A /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789B83C22FEA1D4004C4B3A /* Styles.swift */; };
+		1789B83F22FEA3C0004C4B3A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789B83E22FEA3C0004C4B3A /* UIColor+Extension.swift */; };
+		1789B84122FEB13B004C4B3A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789B84022FEB13B004C4B3A /* String+Extension.swift */; };
+		1789B84322FED24A004C4B3A /* HieroglyphFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789B84222FED24A004C4B3A /* HieroglyphFilterViewModel.swift */; };
+		1789B84522FEE3B7004C4B3A /* Version+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789B84422FEE3B7004C4B3A /* Version+Helper.swift */; };
+		1789B84722FEE4EB004C4B3A /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789B84622FEE4EB004C4B3A /* Consts.swift */; };
 		179699C322F9C98600DF65C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179699C222F9C98600DF65C0 /* AppDelegate.swift */; };
-		179699C522F9C98600DF65C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179699C422F9C98600DF65C0 /* ViewController.swift */; };
 		179699CA22F9C98700DF65C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179699C922F9C98700DF65C0 /* Assets.xcassets */; };
 		179699CD22F9C98700DF65C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179699CB22F9C98700DF65C0 /* LaunchScreen.storyboard */; };
-		179699D922FAE82500DF65C0 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 179699D722FAE82500DF65C0 /* categories.json */; };
-		179699DA22FAE82500DF65C0 /* hieroglyphs.json in Resources */ = {isa = PBXBuildFile; fileRef = 179699D822FAE82500DF65C0 /* hieroglyphs.json */; };
+		179699DE22FAE89A00DF65C0 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179699DD22FAE89A00DF65C0 /* CategoriesViewController.swift */; };
+		179699E422FAEB6200DF65C0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179699E322FAEB6200DF65C0 /* Category.swift */; };
+		179699E722FAECBE00DF65C0 /* CategoryListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179699E622FAECBE00DF65C0 /* CategoryListInteractor.swift */; };
+		179699E922FAEE0B00DF65C0 /* Json+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179699E822FAEE0B00DF65C0 /* Json+Helper.swift */; };
+		179699EB22FAF2A400DF65C0 /* CategoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179699EA22FAF2A400DF65C0 /* CategoryListViewModel.swift */; };
+		179699ED22FAF33A00DF65C0 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179699EC22FAF33A00DF65C0 /* CategoryViewModel.swift */; };
+		179699F122FAF5BE00DF65C0 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179699F022FAF5BE00DF65C0 /* ErrorViewModel.swift */; };
+		179699F522FB01BA00DF65C0 /* LoadingStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179699F422FB01BA00DF65C0 /* LoadingStateTableViewCell.swift */; };
+		179699F722FB251800DF65C0 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179699F622FB251800DF65C0 /* UITableView+Extension.swift */; };
 		6ABB966DDAE2054FB2609DED /* Pods_GardinerNotebook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 968F6EFD624D4F9A42FC52E1 /* Pods_GardinerNotebook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		171D68B022FBD56B0021BA7C /* GNTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNTabBarController.swift; sourceTree = "<group>"; };
+		171D68B422FBD6270021BA7C /* CategoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailViewController.swift; sourceTree = "<group>"; };
+		171D68B922FBDB710021BA7C /* gardiner_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gardiner_list.json; sourceTree = "<group>"; };
+		171D68BB22FBDB8A0021BA7C /* Hieroglyph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hieroglyph.swift; sourceTree = "<group>"; };
+		171D68BE22FBE1340021BA7C /* HieroglyphCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HieroglyphCell.swift; sourceTree = "<group>"; };
+		171D68C122FBE3CE0021BA7C /* CategoryDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailInteractor.swift; sourceTree = "<group>"; };
+		171D68C322FBE3D70021BA7C /* HieroglyphViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HieroglyphViewModel.swift; sourceTree = "<group>"; };
+		171D68C522FBF75E0021BA7C /* CategoryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailViewModel.swift; sourceTree = "<group>"; };
+		171D68C722FBFC0B0021BA7C /* UICollectionViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewController+Extension.swift"; sourceTree = "<group>"; };
+		171D68CD22FC0EA00021BA7C /* HieroglyphListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HieroglyphListInteractor.swift; sourceTree = "<group>"; };
+		171D68CF22FC0F610021BA7C /* HieroglyphListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HieroglyphListViewModel.swift; sourceTree = "<group>"; };
+		171D68D122FC13010021BA7C /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		171D68D322FC18B20021BA7C /* HieroglyphsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HieroglyphsViewController.swift; sourceTree = "<group>"; };
+		171D68D522FC1D420021BA7C /* HieroglyphSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HieroglyphSectionViewModel.swift; sourceTree = "<group>"; };
+		171D68D822FC2CC10021BA7C /* CategoryHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHeaderCell.swift; sourceTree = "<group>"; };
+		171D68DC22FC36F30021BA7C /* HieroglyphDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HieroglyphDetailViewController.swift; sourceTree = "<group>"; };
+		171D68DF22FC38A80021BA7C /* HieroglyphDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HieroglyphDetailInteractor.swift; sourceTree = "<group>"; };
+		171D68E222FC3D300021BA7C /* HieroglyphsDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HieroglyphsDetailHeaderView.swift; sourceTree = "<group>"; };
+		171D68E422FD19D10021BA7C /* HieroglyphDetailInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HieroglyphDetailInformationView.swift; sourceTree = "<group>"; };
+		1789B83C22FEA1D4004C4B3A /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		1789B83E22FEA3C0004C4B3A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		1789B84022FEB13B004C4B3A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		1789B84222FED24A004C4B3A /* HieroglyphFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HieroglyphFilterViewModel.swift; sourceTree = "<group>"; };
+		1789B84422FEE3B7004C4B3A /* Version+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Version+Helper.swift"; sourceTree = "<group>"; };
+		1789B84622FEE4EB004C4B3A /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		179699BF22F9C98600DF65C0 /* GardinerNotebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GardinerNotebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		179699C222F9C98600DF65C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		179699C422F9C98600DF65C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		179699C922F9C98700DF65C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		179699CC22F9C98700DF65C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		179699CE22F9C98700DF65C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		179699D722FAE82500DF65C0 /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
-		179699D822FAE82500DF65C0 /* hieroglyphs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hieroglyphs.json; sourceTree = "<group>"; };
+		179699DD22FAE89A00DF65C0 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		179699E322FAEB6200DF65C0 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		179699E622FAECBE00DF65C0 /* CategoryListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListInteractor.swift; sourceTree = "<group>"; };
+		179699E822FAEE0B00DF65C0 /* Json+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Json+Helper.swift"; sourceTree = "<group>"; };
+		179699EA22FAF2A400DF65C0 /* CategoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewModel.swift; sourceTree = "<group>"; };
+		179699EC22FAF33A00DF65C0 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		179699F022FAF5BE00DF65C0 /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
+		179699F422FB01BA00DF65C0 /* LoadingStateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateTableViewCell.swift; sourceTree = "<group>"; };
+		179699F622FB251800DF65C0 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		900E9C259DA4B843B46152C6 /* Pods-GardinerNotebook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GardinerNotebook.debug.xcconfig"; path = "Target Support Files/Pods-GardinerNotebook/Pods-GardinerNotebook.debug.xcconfig"; sourceTree = "<group>"; };
 		968F6EFD624D4F9A42FC52E1 /* Pods_GardinerNotebook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GardinerNotebook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC456AC7171AC38C1796C1E4 /* Pods-GardinerNotebook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GardinerNotebook.release.xcconfig"; path = "Target Support Files/Pods-GardinerNotebook/Pods-GardinerNotebook.release.xcconfig"; sourceTree = "<group>"; };
@@ -42,6 +104,122 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		171D68AF22FBD54E0021BA7C /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				171D68B022FBD56B0021BA7C /* GNTabBarController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		171D68B222FBD60B0021BA7C /* Category Detail */ = {
+			isa = PBXGroup;
+			children = (
+				171D68C022FBE3AC0021BA7C /* ViewModel */,
+				171D68B322FBD6130021BA7C /* View */,
+			);
+			path = "Category Detail";
+			sourceTree = "<group>";
+		};
+		171D68B322FBD6130021BA7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				171D68B422FBD6270021BA7C /* CategoryDetailViewController.swift */,
+				171D68BD22FBE11D0021BA7C /* Views */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		171D68BD22FBE11D0021BA7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				171D68BE22FBE1340021BA7C /* HieroglyphCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		171D68C022FBE3AC0021BA7C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				171D68C122FBE3CE0021BA7C /* CategoryDetailInteractor.swift */,
+				171D68C522FBF75E0021BA7C /* CategoryDetailViewModel.swift */,
+				171D68C322FBE3D70021BA7C /* HieroglyphViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		171D68C922FC0E710021BA7C /* Hieroglyphs */ = {
+			isa = PBXGroup;
+			children = (
+				171D68CB22FC0E830021BA7C /* ViewModel */,
+				171D68CA22FC0E7F0021BA7C /* View */,
+			);
+			path = Hieroglyphs;
+			sourceTree = "<group>";
+		};
+		171D68CA22FC0E7F0021BA7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				171D68D322FC18B20021BA7C /* HieroglyphsViewController.swift */,
+				171D68D722FC2CA90021BA7C /* Views */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		171D68CB22FC0E830021BA7C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				171D68CD22FC0EA00021BA7C /* HieroglyphListInteractor.swift */,
+				171D68CF22FC0F610021BA7C /* HieroglyphListViewModel.swift */,
+				171D68D522FC1D420021BA7C /* HieroglyphSectionViewModel.swift */,
+				1789B84222FED24A004C4B3A /* HieroglyphFilterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		171D68D722FC2CA90021BA7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				171D68D822FC2CC10021BA7C /* CategoryHeaderCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		171D68DA22FC367A0021BA7C /* Hieroglyph Detail */ = {
+			isa = PBXGroup;
+			children = (
+				171D68DE22FC37220021BA7C /* ViewModel */,
+				171D68DB22FC36980021BA7C /* View */,
+			);
+			path = "Hieroglyph Detail";
+			sourceTree = "<group>";
+		};
+		171D68DB22FC36980021BA7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				171D68DC22FC36F30021BA7C /* HieroglyphDetailViewController.swift */,
+				171D68E122FC3D050021BA7C /* Views */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		171D68DE22FC37220021BA7C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				171D68DF22FC38A80021BA7C /* HieroglyphDetailInteractor.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		171D68E122FC3D050021BA7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				171D68E222FC3D300021BA7C /* HieroglyphsDetailHeaderView.swift */,
+				171D68E422FD19D10021BA7C /* HieroglyphDetailInformationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		179699B622F9C98600DF65C0 = {
 			isa = PBXGroup;
 			children = (
@@ -63,7 +241,13 @@
 		179699C122F9C98600DF65C0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				179699C422F9C98600DF65C0 /* ViewController.swift */,
+				171D68DA22FC367A0021BA7C /* Hieroglyph Detail */,
+				171D68C922FC0E710021BA7C /* Hieroglyphs */,
+				171D68B222FBD60B0021BA7C /* Category Detail */,
+				179699EE22FAF5AB00DF65C0 /* Shared */,
+				179699DC22FAE88000DF65C0 /* Categories */,
+				171D68AF22FBD54E0021BA7C /* Navigation */,
+				179699DB22FAE86700DF65C0 /* Helpers */,
 				179699D422F9C9F700DF65C0 /* Supporting Files */,
 			);
 			path = Classes;
@@ -84,10 +268,95 @@
 		179699D622FAE7F700DF65C0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				179699D722FAE82500DF65C0 /* categories.json */,
-				179699D822FAE82500DF65C0 /* hieroglyphs.json */,
+				171D68B922FBDB710021BA7C /* gardiner_list.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		179699DB22FAE86700DF65C0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				179699E822FAEE0B00DF65C0 /* Json+Helper.swift */,
+				179699F622FB251800DF65C0 /* UITableView+Extension.swift */,
+				171D68C722FBFC0B0021BA7C /* UICollectionViewController+Extension.swift */,
+				1789B83C22FEA1D4004C4B3A /* Styles.swift */,
+				1789B83E22FEA3C0004C4B3A /* UIColor+Extension.swift */,
+				1789B84022FEB13B004C4B3A /* String+Extension.swift */,
+				1789B84422FEE3B7004C4B3A /* Version+Helper.swift */,
+				1789B84622FEE4EB004C4B3A /* Consts.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		179699DC22FAE88000DF65C0 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				179699DF22FAEB1700DF65C0 /* Model */,
+				179699E522FAEC8900DF65C0 /* ViewModel */,
+				179699E122FAEB2500DF65C0 /* View */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		179699DF22FAEB1700DF65C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				179699E322FAEB6200DF65C0 /* Category.swift */,
+				171D68BB22FBDB8A0021BA7C /* Hieroglyph.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		179699E122FAEB2500DF65C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				179699DD22FAE89A00DF65C0 /* CategoriesViewController.swift */,
+				179699F222FB019100DF65C0 /* Views */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		179699E522FAEC8900DF65C0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				179699E622FAECBE00DF65C0 /* CategoryListInteractor.swift */,
+				179699EA22FAF2A400DF65C0 /* CategoryListViewModel.swift */,
+				179699EC22FAF33A00DF65C0 /* CategoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		179699EE22FAF5AB00DF65C0 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				179699F322FB019D00DF65C0 /* Views */,
+				179699EF22FAF5B000DF65C0 /* ViewModel */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		179699EF22FAF5B000DF65C0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				179699F022FAF5BE00DF65C0 /* ErrorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		179699F222FB019100DF65C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				171D68D122FC13010021BA7C /* CategoryCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		179699F322FB019D00DF65C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				179699F422FB01BA00DF65C0 /* LoadingStateTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		559652662DD52EC2BEFECBF9 /* Frameworks */ = {
@@ -119,6 +388,7 @@
 				179699BC22F9C98600DF65C0 /* Frameworks */,
 				179699BD22F9C98600DF65C0 /* Resources */,
 				179699D522F9DB4F00DF65C0 /* ShellScript */,
+				9EE283015BD87F294EA4FC3E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,8 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				179699CD22F9C98700DF65C0 /* LaunchScreen.storyboard in Resources */,
-				179699D922FAE82500DF65C0 /* categories.json in Resources */,
-				179699DA22FAE82500DF65C0 /* hieroglyphs.json in Resources */,
+				171D68BA22FBDB710021BA7C /* gardiner_list.json in Resources */,
 				179699CA22F9C98700DF65C0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +485,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n\n";
 		};
+		9EE283015BD87F294EA4FC3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GardinerNotebook/Pods-GardinerNotebook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GardinerNotebook/Pods-GardinerNotebook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GardinerNotebook/Pods-GardinerNotebook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -223,8 +509,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				179699C522F9C98600DF65C0 /* ViewController.swift in Sources */,
+				179699ED22FAF33A00DF65C0 /* CategoryViewModel.swift in Sources */,
 				179699C322F9C98600DF65C0 /* AppDelegate.swift in Sources */,
+				171D68BC22FBDB8A0021BA7C /* Hieroglyph.swift in Sources */,
+				171D68C622FBF75E0021BA7C /* CategoryDetailViewModel.swift in Sources */,
+				171D68E022FC38A80021BA7C /* HieroglyphDetailInteractor.swift in Sources */,
+				1789B84722FEE4EB004C4B3A /* Consts.swift in Sources */,
+				171D68C222FBE3CE0021BA7C /* CategoryDetailInteractor.swift in Sources */,
+				179699DE22FAE89A00DF65C0 /* CategoriesViewController.swift in Sources */,
+				1789B84322FED24A004C4B3A /* HieroglyphFilterViewModel.swift in Sources */,
+				1789B84122FEB13B004C4B3A /* String+Extension.swift in Sources */,
+				171D68D622FC1D420021BA7C /* HieroglyphSectionViewModel.swift in Sources */,
+				171D68B522FBD6270021BA7C /* CategoryDetailViewController.swift in Sources */,
+				1789B83F22FEA3C0004C4B3A /* UIColor+Extension.swift in Sources */,
+				171D68E322FC3D300021BA7C /* HieroglyphsDetailHeaderView.swift in Sources */,
+				171D68D422FC18B20021BA7C /* HieroglyphsViewController.swift in Sources */,
+				171D68CE22FC0EA00021BA7C /* HieroglyphListInteractor.swift in Sources */,
+				171D68B122FBD56B0021BA7C /* GNTabBarController.swift in Sources */,
+				179699EB22FAF2A400DF65C0 /* CategoryListViewModel.swift in Sources */,
+				1789B83D22FEA1D4004C4B3A /* Styles.swift in Sources */,
+				179699F522FB01BA00DF65C0 /* LoadingStateTableViewCell.swift in Sources */,
+				171D68BF22FBE1340021BA7C /* HieroglyphCell.swift in Sources */,
+				1789B84522FEE3B7004C4B3A /* Version+Helper.swift in Sources */,
+				179699E722FAECBE00DF65C0 /* CategoryListInteractor.swift in Sources */,
+				171D68C422FBE3D70021BA7C /* HieroglyphViewModel.swift in Sources */,
+				179699F122FAF5BE00DF65C0 /* ErrorViewModel.swift in Sources */,
+				171D68E522FD19D10021BA7C /* HieroglyphDetailInformationView.swift in Sources */,
+				171D68DD22FC36F30021BA7C /* HieroglyphDetailViewController.swift in Sources */,
+				171D68D022FC0F610021BA7C /* HieroglyphListViewModel.swift in Sources */,
+				171D68D922FC2CC10021BA7C /* CategoryHeaderCell.swift in Sources */,
+				179699F722FB251800DF65C0 /* UITableView+Extension.swift in Sources */,
+				171D68D222FC13010021BA7C /* CategoryCell.swift in Sources */,
+				179699E422FAEB6200DF65C0 /* Category.swift in Sources */,
+				171D68C822FBFC0B0021BA7C /* UICollectionViewController+Extension.swift in Sources */,
+				179699E922FAEE0B00DF65C0 /* Json+Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +684,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JMJB9V596;
 				INFOPLIST_FILE = "$(SRCROOT)/Classes/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,7 +704,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JMJB9V596;
 				INFOPLIST_FILE = "$(SRCROOT)/Classes/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
