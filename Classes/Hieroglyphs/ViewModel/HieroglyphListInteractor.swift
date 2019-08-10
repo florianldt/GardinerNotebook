@@ -24,14 +24,13 @@ extension HieroglyphListInteractor {
     func fetchHieroglyphs() {
         viewModel.accept(.init(with: .loading))
         Json().from("gardiner_list",
-                    type: [Category].self)
-        { [weak self] result in
+                    type: [Category].self) { [weak self] result in
             guard let strongSelf = self else { return }
             switch result {
             case .success(let categories):
                 strongSelf.viewModel.accept(.init(with: .loaded(categories)))
-            case .failure(let error):
-                strongSelf.viewModel.accept(.init(with: .failed(error)))
+            case .failure(let errorDescription):
+                strongSelf.viewModel.accept(.init(with: .failed(errorDescription)))
             }
         }
     }
