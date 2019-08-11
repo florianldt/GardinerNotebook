@@ -35,6 +35,7 @@
 		1789B84922FEF88A004C4B3A /* LoadingStateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789B84822FEF88A004C4B3A /* LoadingStateCollectionViewCell.swift */; };
 		1789B84B22FEFA76004C4B3A /* ErrorStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789B84A22FEFA76004C4B3A /* ErrorStateTableViewCell.swift */; };
 		1789B84D22FF0033004C4B3A /* ErrorStateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789B84C22FF0033004C4B3A /* ErrorStateCollectionViewCell.swift */; };
+		1789B84F22FF080D004C4B3A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1789B84E22FF080D004C4B3A /* GoogleService-Info.plist */; };
 		179699C322F9C98600DF65C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179699C222F9C98600DF65C0 /* AppDelegate.swift */; };
 		179699CA22F9C98700DF65C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 179699C922F9C98700DF65C0 /* Assets.xcassets */; };
 		179699CD22F9C98700DF65C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 179699CB22F9C98700DF65C0 /* LaunchScreen.storyboard */; };
@@ -79,6 +80,7 @@
 		1789B84822FEF88A004C4B3A /* LoadingStateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateCollectionViewCell.swift; sourceTree = "<group>"; };
 		1789B84A22FEFA76004C4B3A /* ErrorStateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateTableViewCell.swift; sourceTree = "<group>"; };
 		1789B84C22FF0033004C4B3A /* ErrorStateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateCollectionViewCell.swift; sourceTree = "<group>"; };
+		1789B84E22FF080D004C4B3A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		179699BF22F9C98600DF65C0 /* GardinerNotebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GardinerNotebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		179699C222F9C98600DF65C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		179699C922F9C98700DF65C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				179699D622FAE7F700DF65C0 /* Data */,
 				179699C222F9C98600DF65C0 /* AppDelegate.swift */,
 				179699CB22F9C98700DF65C0 /* LaunchScreen.storyboard */,
+				1789B84E22FF080D004C4B3A /* GoogleService-Info.plist */,
 				179699CE22F9C98700DF65C0 /* Info.plist */,
 				179699C922F9C98700DF65C0 /* Assets.xcassets */,
 			);
@@ -398,6 +401,7 @@
 				179699BD22F9C98600DF65C0 /* Resources */,
 				179699D522F9DB4F00DF65C0 /* ShellScript */,
 				9EE283015BD87F294EA4FC3E /* [CP] Embed Pods Frameworks */,
+				1789B85022FF08EA004C4B3A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -446,6 +450,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1789B84F22FF080D004C4B3A /* GoogleService-Info.plist in Resources */,
 				179699CD22F9C98700DF65C0 /* LaunchScreen.storyboard in Resources */,
 				171D68BA22FBDB710021BA7C /* gardiner_list.json in Resources */,
 				179699CA22F9C98700DF65C0 /* Assets.xcassets in Resources */,
@@ -476,6 +481,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		1789B85022FF08EA004C4B3A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
 		};
 		179699D522F9DB4F00DF65C0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -623,7 +646,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -678,7 +701,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
