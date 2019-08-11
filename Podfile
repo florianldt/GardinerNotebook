@@ -10,4 +10,7 @@ target 'GardinerNotebook' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'AloeStackView'
+  pod 'Firebase/Core'
+  pod 'Fabric', '~> 1.10.1'
+  pod 'Crashlytics', '~> 3.13.1'
 end
