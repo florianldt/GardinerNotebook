@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = .black
         UITabBar.appearance().tintColor = .black
         UIBarButtonItem.appearance().tintColor = .black
+
+        FirebaseApp.configure()
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = GNTabBarController()
