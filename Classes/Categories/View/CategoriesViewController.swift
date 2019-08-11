@@ -59,7 +59,7 @@ class CategoriesViewController: UITableViewController {
     @objc
     private func onInfoBarButtonItem() {
         let message = "Thank you for the support!\n\(VersionManager().currentFormatted)"
-        let infoAlertController = UIAlertController(title: "Gardiner's Notebook",
+        let infoAlertController = UIAlertController(title: "Gardiner's Memo",
                                                     message: message,
                                                     preferredStyle: .alert)
         let githubAction = UIAlertAction(title: "View source", style: .default) { [weak self] _ in
