@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         UINavigationBar.appearance().tintColor = .black
-        UITabBar.appearance().tintColor = .black
+        UITabBar.appearance().tintColor = UIColor.fromHex(Styles.Colors.gold)
         UIBarButtonItem.appearance().tintColor = .black
 
         FirebaseApp.configure()
