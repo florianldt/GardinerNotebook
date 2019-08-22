@@ -13,5 +13,6 @@ enum Consts {
     enum Urls {
 
         static let github = URL(string: "https://github.com/florianldt/GardinerNotebook")!
+        static let rating = URL(string: "itms-apps://itunes.apple.com/app/id1476150438?action=write-review")!
     }
 }
