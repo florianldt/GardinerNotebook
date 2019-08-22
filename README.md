@@ -16,7 +16,7 @@ If you are interested to contribute for the application, do not hesitate.
 
 The hieroglyphs information gathered from Wikipedia are also not complete. If you are confortable enough with the egyptian hieroglyphs to improve the app, it would be awesome.
 
-Any contributions are welcomed.
+Any contribution is welcome.
 
 ## Contact
 
