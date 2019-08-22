@@ -32,5 +32,6 @@ class Styles {
 
         static let backgroundLightGray = "EEEEEE"
         static let errorLabel = "CDCDCD"
+        static let gold = "917A3B"
     }
 }
