@@ -90,12 +90,17 @@ class HieroglyphsViewController: UICollectionViewController {
         let infoAlertController = UIAlertController(title: "Gardiner's Memo",
                                                     message: message,
                                                     preferredStyle: .alert)
-        let githubAction = UIAlertAction(title: "Feedback / View source", style: .default) { [weak self] _ in
+        let githubAction = UIAlertAction(title: "Contribute?", style: .default) { [weak self] _ in
             guard let strongSelf = self else { return }
             strongSelf.onGithubAction()
         }
+        let reviewAction = UIAlertAction(title: "Write a Review", style: .default) { [weak self] _ in
+            guard let strongSelf = self else { return }
+            strongSelf.onWriteReview()
+        }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         infoAlertController.addAction(githubAction)
+        infoAlertController.addAction(reviewAction)
         infoAlertController.addAction(cancelAction)
         present(infoAlertController, animated: true)
     }
@@ -103,6 +108,10 @@ class HieroglyphsViewController: UICollectionViewController {
     private func onGithubAction() {
         let safariController = SFSafariViewController(url: Consts.Urls.github)
         present(safariController, animated: true)
+    }
+
+    private func onWriteReview() {
+        UIApplication.shared.open(Consts.Urls.rating, options: [:])
     }
 }
 
