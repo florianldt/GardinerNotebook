@@ -31,7 +31,14 @@ class CategoryDetailViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        var dynamicColor: UIColor {
+            if #available(iOS 13.0, *) {
+                return .systemBackground
+            } else {
+                return .white
+            }
+        }
+        view.backgroundColor = dynamicColor
         setupNavigationBar()
         setupCollectionView()
         interactor.fetchHieroglyphs()
@@ -45,7 +52,7 @@ class CategoryDetailViewController: UICollectionViewController {
     }
 
     private func setupCollectionView() {
-        collectionView.backgroundColor = UIColor.fromHex(Styles.Colors.backgroundLightGray)
+        collectionView.backgroundColor = UIColor(named: "backgroundLightGray")
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(HieroglyphCell.self)

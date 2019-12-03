@@ -19,7 +19,14 @@ class HieroglyphsDetailHeaderView: UIView {
 
     init() {
         super.init(frame: .zero)
-        backgroundColor = .white
+        var backgroundColor: UIColor {
+            if #available(iOS 13.0, *) {
+                return .systemBackground
+            } else {
+                return .white
+            }
+        }
+        self.backgroundColor = backgroundColor
         addSubview(symbolLabel)
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.6),

@@ -22,7 +22,14 @@ class CategoryCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.backgroundColor = .white
+        var backgroundColor: UIColor {
+            if #available(iOS 13.0, *) {
+                return .systemBackground
+            } else {
+                return .white
+            }
+        }
+        contentView.backgroundColor = backgroundColor
         contentView.addSubview(nameLabel)
         NSLayoutConstraint.activate([
             nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),

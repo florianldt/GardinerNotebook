@@ -11,7 +11,12 @@ import UIKit
 class LoadingStateCollectionViewCell: UICollectionViewCell {
 
     let activityIndicator: UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView(style: .gray)
+        let indicator: UIActivityIndicatorView
+        if #available(iOS 13.0, *) {
+            indicator = UIActivityIndicatorView(style: .medium)
+        } else {
+            indicator = UIActivityIndicatorView(style: .gray)
+        }
         indicator.translatesAutoresizingMaskIntoConstraints = false
         return indicator
     }()

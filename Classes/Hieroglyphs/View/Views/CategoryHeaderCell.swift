@@ -20,7 +20,7 @@ class CategoryHeaderCell: UICollectionViewCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.backgroundColor = UIColor.fromHex(Styles.Colors.backgroundLightGray)
+        contentView.backgroundColor = UIColor.Names.backgroundLightGray.color
         contentView.addSubview(nameLabel)
 
         NSLayoutConstraint.activate([
