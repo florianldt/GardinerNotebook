@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         UINavigationBar.appearance().tintColor = UIColor.Names.tint.color
         UITabBar.appearance().tintColor = UIColor.Names.gold.color
-        UIBarButtonItem.appearance(). = UIColor.Names.tint.color
+        UIBarButtonItem.appearance().tintColor = UIColor.Names.tint.color
 
         FirebaseApp.configure()
 
