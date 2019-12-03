@@ -42,13 +42,6 @@ class HieroglyphsDetailHeaderView: UIView {
     }
 
     func configure(with viewModel: HieroglyphViewModel) {
-        if
-            let unicode = viewModel.unicode,
-            let charAsInt = Int(unicode, radix: 16),
-            let uScalar = UnicodeScalar(charAsInt) {
-            symbolLabel.text = String(uScalar)
-        } else {
-            symbolLabel.text = "Incorrect unicode character"
-        }
+        symbolLabel.text = viewModel.unicode.toUnicodeCharacter
     }
 }

@@ -60,14 +60,7 @@ class HieroglyphCell: UICollectionViewCell {
 
     func configure(with viewModel: HieroglyphViewModel) {
         self.viewModel = viewModel
-        if
-            let unicode = viewModel.unicode,
-            let charAsInt = Int(unicode, radix: 16),
-            let uScalar = UnicodeScalar(charAsInt) {
-            hieroglyphSymbolLabel.text = String(uScalar)
-        } else {
-            hieroglyphSymbolLabel.text = "Incorrect unicode character"
-        }
+        hieroglyphSymbolLabel.text = viewModel.unicode.toUnicodeCharacter
         hieroglyphIdLabel.text = viewModel.id
     }
 }

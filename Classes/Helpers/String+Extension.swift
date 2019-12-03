@@ -22,4 +22,14 @@ extension String {
                                             context: nil)
         return boundingBox.height
     }
+
+    var toUnicodeCharacter: String {
+        guard
+            let charAsInt = Int(self, radix: 16),
+            let uScalar = UnicodeScalar(charAsInt)
+            else {
+            return "--"
+        }
+        return String(uScalar)
+    }
 }
