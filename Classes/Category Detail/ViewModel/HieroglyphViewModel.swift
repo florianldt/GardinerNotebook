@@ -10,7 +10,7 @@ import Foundation
 
 struct HieroglyphViewModel {
     let id: String
-    let unicode: String?
+    let unicode: String
     let description: String
     let transliteration: String
     let phonetic: String
@@ -22,9 +22,9 @@ extension HieroglyphViewModel {
     static func from(_ hieroglyphs: [Hieroglyph]) -> [HieroglyphViewModel] {
         return hieroglyphs
             .map { hieroglyph in
-                var formattedUnicode: String? {
+                var formattedUnicode: String {
                     guard let range = hieroglyph.unicode.range(of: "+")  else {
-                        return nil
+                        return "--"
                     }
                     return String(hieroglyph.unicode[range.upperBound...])
                 }
