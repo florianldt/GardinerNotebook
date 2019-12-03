@@ -12,6 +12,7 @@ import AloeStackView
 class HieroglyphDetailViewController: AloeStackViewController {
 
     let interactor: HieroglyphDetailInteractor
+    var hieroglyphsDetailHeaderView: HieroglyphsDetailHeaderView!
 
     init(interactor: HieroglyphDetailInteractor) {
         self.interactor = interactor
@@ -54,12 +55,62 @@ class HieroglyphDetailViewController: AloeStackViewController {
         let dismissBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop,
                                                    target: self,
                                                    action: #selector(onDismissBarButtonitem))
+        let copyBarButtonItem = UIBarButtonItem(title: "Export",
+                                                style: .plain,
+                                                target: self,
+                                                action: #selector(onExportBarButtonItem))
         navigationItem.leftBarButtonItem = dismissBarButtonItem
+        navigationItem.rightBarButtonItem = copyBarButtonItem
     }
 
     @objc
     private func onDismissBarButtonitem() {
         dismiss(animated: true)
+    }
+
+    @objc
+    private func onExportBarButtonItem() {
+        let alertController = UIAlertController(title: nil,
+                                                message: "Choose an export option",
+                                                preferredStyle: .actionSheet)
+        let characterAction = UIAlertAction(title: "Copy as character", style: .default) { [weak self] _ in
+            guard let strongSelf = self else { return }
+            strongSelf.onCharacterAction()
+        }
+        let imageAction = UIAlertAction(title: "Save as image", style: .default) { [weak self] _ in
+            guard let strongSelf = self else { return }
+            strongSelf.onImageAction()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(characterAction)
+        alertController.addAction(imageAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+
+    private func onCharacterAction() {
+        UIPasteboard.general.string = interactor.hieroglyphViewModel.unicode.toUnicodeCharacter
+    }
+
+    private func onImageAction() {
+        guard let image = UIImage.imageWithView(view: hieroglyphsDetailHeaderView) else {
+            presentBasicAlert(title: "The hieroglyph cannot be exported!", message: nil)
+            return
+        }
+        UIImageWriteToSavedPhotosAlbum(image,
+                                       self,
+                                       #selector(image(_:didFinishSavingWithError:contextInfo:)),
+                                       nil)
+    }
+
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer) {
+        guard error != nil else {
+            presentBasicAlert(title: "Image saved!",
+                              message: nil)
+            return
+        }
+        presentBasicAlert(title: "Error while saving the image. Be sure you have authorized the app to save images!",
+                          message: nil)
     }
 
     private func setupStackView() {
@@ -72,9 +123,9 @@ class HieroglyphDetailViewController: AloeStackViewController {
     }
 
     private func setupHeaderView() {
-        let view = HieroglyphsDetailHeaderView()
-        view.configure(with: interactor.hieroglyphViewModel)
-        stackView.addRow(view)
+        hieroglyphsDetailHeaderView = HieroglyphsDetailHeaderView()
+        hieroglyphsDetailHeaderView.configure(with: interactor.hieroglyphViewModel)
+        stackView.addRow(hieroglyphsDetailHeaderView)
     }
 
     private func setupDescriptionView() {
