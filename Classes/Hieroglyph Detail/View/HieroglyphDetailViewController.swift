@@ -63,7 +63,7 @@ class HieroglyphDetailViewController: AloeStackViewController {
     }
 
     private func setupStackView() {
-        stackView.bounces = true
+        stackView.alwaysBounceVertical = true
         setupHeaderView()
         setupDescriptionView()
         setupTransliterationView()
