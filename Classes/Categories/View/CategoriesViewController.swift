@@ -26,7 +26,14 @@ class CategoriesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        var backgroundColor: UIColor {
+            if #available(iOS 13.0, *) {
+                return .systemBackground
+            } else {
+                return .white
+            }
+        }
+        view.backgroundColor = backgroundColor
         setupNavigationBar()
         setupTableView()
         interactor.fetchCategories()

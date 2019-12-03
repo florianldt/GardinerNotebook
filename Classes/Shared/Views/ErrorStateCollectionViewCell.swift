@@ -14,7 +14,7 @@ class ErrorStateCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-        label.textColor = UIColor.fromHex(Styles.Colors.errorLabel)
+        label.textColor = UIColor.Names.errorLabel.color
         label.textAlignment = .center
         label.numberOfLines = 2
         return label

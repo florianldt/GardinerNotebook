@@ -24,7 +24,14 @@ class HieroglyphDetailViewController: AloeStackViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        stackView.backgroundColor = .white
+        var backgroundColor: UIColor {
+            if #available(iOS 13.0, *) {
+                return .systemBackground
+            } else {
+                return .white
+            }
+        }
+        stackView.backgroundColor = backgroundColor
         setupNavigationBar()
         setupStackView()
     }
@@ -34,9 +41,16 @@ class HieroglyphDetailViewController: AloeStackViewController {
             navigationController?.navigationBar.prefersLargeTitles = true
         }
         title = interactor.hieroglyphViewModel.id
+        var dynamicColor: UIColor {
+            if #available(iOS 13.0, *) {
+                return .systemBackground
+            } else {
+                return .white
+            }
+        }
+        navigationController?.navigationBar.backgroundColor = dynamicColor
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.backgroundColor = .white
         let dismissBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop,
                                                    target: self,
                                                    action: #selector(onDismissBarButtonitem))
@@ -49,7 +63,7 @@ class HieroglyphDetailViewController: AloeStackViewController {
     }
 
     private func setupStackView() {
-        stackView.bounces = true
+        stackView.alwaysBounceVertical = true
         setupHeaderView()
         setupDescriptionView()
         setupTransliterationView()

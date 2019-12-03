@@ -30,7 +30,14 @@ class HieroglyphCell: UICollectionViewCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.backgroundColor = .white
+        var dynamicColor: UIColor {
+            if #available(iOS 13.0, *) {
+                return .systemBackground
+            } else {
+                return .white
+            }
+        }
+        contentView.backgroundColor = dynamicColor
         contentView.layer.cornerRadius = 7
         contentView.addSubview(hieroglyphSymbolLabel)
         contentView.addSubview(hieroglyphIdLabel)

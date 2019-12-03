@@ -10,26 +10,17 @@ import UIKit
 
 extension UIColor {
 
-    // http://stackoverflow.com/a/27203691/940936
-    public static func fromHex(_ hex: String) -> UIColor {
-        var cString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+    enum Names: String {
+        case backgroundLightGray
+        case tint
+        case errorLabel
+        case gold
 
-        if cString.hasPrefix("#") {
-            cString.remove(at: cString.startIndex)
+        var color: UIColor {
+            guard let color = UIColor(named: self.rawValue) else {
+                preconditionFailure("\(self.rawValue) color not implemented!")
+            }
+            return color
         }
-
-        if cString.count != 6 {
-            return UIColor.gray
-        }
-
-        var rgbValue: UInt32 = 0
-        Scanner(string: cString).scanHexInt32(&rgbValue)
-
-        return UIColor(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: CGFloat(1.0)
-        )
     }
 }
